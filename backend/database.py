@@ -4,7 +4,14 @@ import motor.motor_asyncio
 
 from model import Todo
 
-client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017/')
+from dotenv import dotenv_values
+
+config = dotenv_values(".env")
+MONGODB_URI = config.get("MONGODB_URI")
+
+
+
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URI)
 database = client.TodoList
 collection = database.todo
 
