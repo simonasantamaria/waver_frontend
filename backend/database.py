@@ -8,10 +8,12 @@ from dotenv import dotenv_values
 
 config = dotenv_values(".env")
 MONGODB_URI = config.get("MONGODB_URI")
+print("MONGODB_URI",MONGODB_URI)
 
 
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URI)
+print("client",client)
 database = client.TodoList
 collection = database.todo
 
