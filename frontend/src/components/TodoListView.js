@@ -4,6 +4,7 @@ import React from 'react';
 import TodoItem from './Todo';
 
 export default function TodoView(props) {
+    console.log(props);
     return (
         <div>
             <ul>
