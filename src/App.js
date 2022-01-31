@@ -13,7 +13,7 @@ function App() {
 
   // Read all todos
   useEffect(() => {
-    axios.get('/api/todo')
+    axios.get('https://waver--backend.herokuapp.com/api/todo')
       .then(res => {
         setTodoList(res.data)
       })
@@ -21,7 +21,7 @@ function App() {
 
   // Post a todo
   const addTodoHandler = () => {
-    axios.post('/api/todo/', { 'title': title, 'description': desc })
+    axios.post('https://waver--backend.herokuapp.com/api/todo/', { 'title': title, 'description': desc })
       .then(res => console.log(res))
 };
 

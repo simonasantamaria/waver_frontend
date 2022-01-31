@@ -5,7 +5,7 @@ import React from 'react';
 
 function TodoItem(props) {
     const deleteTodoHandler = (title) => {
-    axios.delete(`/api/todo/${title}`)
+    axios.delete(`https://waver--backend.herokuapp.com/api/todo/${title}`)
         .then(res => console.log(res.data)) }
 
     return (
